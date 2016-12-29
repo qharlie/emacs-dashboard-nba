@@ -36,7 +36,7 @@
 	  (error nil))
 	
 
-	(url-copy-file (format "http://data.nba.net/data/10s/prod/v1/%s/scoreboard.json" "20161227")  file-path)
+	(url-copy-file (format "http://data.nba.net/data/10s/prod/v1/%s/scoreboard.json" (format-time-string "%Y%m%d" (time-subtract (current-time) (days-to-time 1))))  file-path)
 	
 	(setq nba-list (mapcar (lambda (entry)
 				 (format "\n\t%s\n\t\t%s (%s/%s) : %s\n\t\t%s (%s/%s) : %s__http://www.foo.com "
@@ -65,3 +65,6 @@
 	)
     
     ))
+
+					;(time-subtract
+
