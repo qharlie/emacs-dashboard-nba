@@ -39,7 +39,7 @@
 	(url-copy-file (format "http://data.nba.net/data/10s/prod/v1/%s/scoreboard.json" (format-time-string "%Y%m%d" (time-subtract (current-time) (days-to-time 1))))  file-path)
 	
 	(setq nba-list (mapcar (lambda (entry)
-				 (format "\n\t%s\n\t\t%s (%s/%s) : %s\n\t\t%s (%s/%s) : %s__http://www.foo.com "
+				 (format "\n\t%s\n\t\t%s (%s/%s) : %s\n\t\t%s (%s/%s) : %s__https://duckduckgo.com/?q=NBA+%s+vs+%s+highlights+%s&ia=videos"
 					 (let-alist entry .nugget.text)
 					 
 					 (let-alist entry .vTeam.triCode)
@@ -52,6 +52,9 @@
 					 (let-alist entry .hTeam.loss)
 					 (let-alist entry .hTeam.score)
 
+					 (let-alist entry .vTeam.triCode)
+					 (let-alist entry .hTeam.triCode)
+					 (format-time-string "%Y-%m-%d")
 					 ))
         				;(concat (let-alist entry .data.title ) (concat " - " (let-alist entry .data.url ))))
 			       (let-alist (json-read-file  file-path) .games)))
