@@ -1,5 +1,5 @@
-# emacs-dashboard-reddits
-Adds a /r/emacs section to the dashboard.
+# emacs-dashboard-nba
+Adds last nights scores and summaries for NBA games
 
 
 
