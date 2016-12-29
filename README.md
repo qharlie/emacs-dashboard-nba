@@ -8,7 +8,7 @@ Adds last nights scores and summaries for NBA games
 
 Sample Config ( until I get it onto MELPA ) 
 
-
+```lisp
 (require 'dashboard)
 (load-file "~/workspace/emacs-dashboard-reddits/dashboard-reddit.el")
 (load-file "~/workspace/emacs-dashboard-stackxc/dashboard-stacxc.el")
@@ -21,3 +21,4 @@ Sample Config ( until I get it onto MELPA )
 			(reddits . 5)
 			(nbas . 10)
 			))
+```
