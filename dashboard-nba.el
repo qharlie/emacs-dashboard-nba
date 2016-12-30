@@ -1,5 +1,4 @@
 (require 'json)
-(require 'request)
 
 (add-to-list 'dashboard-item-generators  '(nbas . dashboard-insert-nba))
 (add-to-list 'dashboard-items '(nbas) t)
@@ -100,17 +99,13 @@
 	(setq nba-list (dashboard-read-nba-file file-path))
 	
 	(when (dashboard-insert-nba-list
-	       "Last nights NBA scores:"
+	       (format "NBA scores for %s " (format-time-string "%Y-%m-%d" (time-subtract (current-time) (days-to-time 1))))
 	       (dashboard-subseq nba-list 0 list-size)))	 
 	(dashboard-insert--shortcut "q" "NBA Scores:")
 
 	(dashboard-highlight-nba)
 	
 	)
-
-
-
-
     ))
 
 					;(time-subtract
