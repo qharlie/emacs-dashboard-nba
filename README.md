@@ -1,3 +1,5 @@
+# For full blown NBA mode get https://github.com/lramo062/nba-stats
+
 # emacs-dashboard-nba
 Adds last nights scores and summaries for NBA games
 
