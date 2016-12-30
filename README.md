@@ -2,6 +2,7 @@
 
 # emacs-dashboard-nba
 See also: [Reddit Dashboard](https://github.com/qorrect/emacs-dashboard-reddits)
+
 Adds last nights scores and summaries for NBA games to your dashboard:
 ![Screenshot](screenshot.png?raw=true "Screenshot")
 
