@@ -1,12 +1,8 @@
-# For full blown NBA mode get https://github.com/lramo062/nba-stats
+# This is a plugin for the ![Emacs Dashboard](https://github.com/rakanalh/emacs-dashboard)
 
 # emacs-dashboard-nba
-Adds last nights scores and summaries for NBA games
-
-
-
+Adds last nights scores and summaries for NBA games:
 ![Screenshot](screenshot.png?raw=true "Screenshot")
-
 
 Sample Config ( until I get it onto MELPA ) 
 
