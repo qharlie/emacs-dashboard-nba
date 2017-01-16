@@ -1,3 +1,24 @@
+;;; dashboard-nba-pluginb.el --- Adds nba highlights to emacs-dashboard
+
+;; Copyright (c) 2017 Charlie Sanders & Contributirs
+;;
+;; Author: Charlie Sanders
+;; URL: https://github.com/qorrect/emacs-dashboard-nba
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+;;
+;; Created: January 1st, 2017
+;; Modified: January 10th, 2017
+;; Version: 0.1
+;; Keywords: startup screen tools plugin
+;; Package-Requires: ((emacs "24.4") (dashboard "1.0.1"))
+;;; Commentary:
+
+;; Adds scores and a summary of last nights NBA games
+;;; Code:
+
 (require 'json)
 (require 'dashboard)
 
