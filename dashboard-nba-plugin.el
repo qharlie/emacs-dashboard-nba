@@ -1,4 +1,5 @@
 (require 'json)
+(require 'dashboard)
 
 (add-to-list 'dashboard-item-generators  '(nbas . dashboard-insert-nba))
 (add-to-list 'dashboard-items '(nbas) t)
