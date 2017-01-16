@@ -1,4 +1,4 @@
-;;; dashboard-nba-pluginb.el --- Adds nba highlights to emacs-dashboard
+;;; dashboard-nba-plugin.el --- Adds nba highlights to emacs-dashboard
 
 ;; Copyright (c) 2017 Charlie Sanders & Contributirs
 ;;
@@ -131,6 +131,5 @@
 	)
     ))
 
-					;(time-subtract
 
-
+;;; dashboard-nba-plugin.el ends here 
