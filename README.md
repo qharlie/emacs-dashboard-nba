@@ -1,4 +1,4 @@
-# This is a plugin for the ![Emacs Dashboard](https://github.com/rakanalh/emacs-dashboard)
+# This is a plugin for the [Emacs Dashboard](https://github.com/rakanalh/emacs-dashboard)
 
 # emacs-dashboard-nba
 See also: [Reddit Dashboard](https://github.com/qorrect/emacs-dashboard-reddits)
