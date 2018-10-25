@@ -25,6 +25,71 @@
 (add-to-list 'dashboard-item-generators  '(nbas . dashboard-insert-nba))
 (add-to-list 'dashboard-items '(nbas) t)
 
+
+(defgroup charlie-lock-faces nil
+  "Faces for charlie-lock."
+  :group 'charlie-lock
+  :group 'faces)
+
+(defface charlie-yellow
+  '((((min-colors 88) (background dark))
+     (:background "yellow1" :foreground "black"))
+    (((background dark)) (:background "yellow" :foreground "black"))
+    (((min-colors 88)) (:background "yellow1"))
+    (t (:background "yellow")))
+  "Default face for charlie-lock mode."
+  :group 'charlie-lock-faces)
+
+(defface charlie-pink
+  '((((background dark)) (:background "pink" :foreground "black"))
+    (t (:background "pink")))
+  "Face for charlie-lock mode."
+  :group 'charlie-lock-faces)
+
+(defface charlie-green
+  '((((min-colors 88) (background dark))
+     (:background "green1" :foreground "black"))
+    (((background dark)) (:background "green" :foreground "black"))
+    (((min-colors 88)) (:background "green1"))
+    (t (:background "green")))
+  "Face for charlie-lock mode."
+  :group 'charlie-lock-faces)
+
+(defface charlie-blue
+  '((((background dark)) (:background "light blue" :foreground "black"))
+    (t (:background "light blue")))
+  "Face for charlie-lock mode."
+  :group 'charlie-lock-faces)
+
+(defface charlie-black-b
+  '((t (:weight bold)))
+  "Face for charlie-lock mode."
+  :group 'charlie-lock-faces)
+
+(defface charlie-blue-b
+  '((((min-colors 88)) (:weight bold :foreground "blue1"))
+    (t (:weight bold :foreground "blue")))
+  "Face for charlie-lock mode."
+  :group 'charlie-lock-faces)
+
+(defface charlie-green-b
+  '((((min-colors 88)) (:weight bold :foreground "green1"))
+    (t (:weight bold :foreground "green")))
+  "Face for charlie-lock mode."
+  :group 'charlie-lock-faces)
+
+(defface charlie-red-b
+  '((((min-colors 88)) (:weight bold :foreground "red1"))
+    (t (:weight bold :foreground "red")))
+  "Face for charlie-lock mode."
+  :group 'charlie-lock-faces)
+
+(defface charlie-black-hb
+  '((t (:weight bold :height 1.67 :inherit variable-pitch)))
+  "Face for charlie-lock mode."
+  :group 'charlie-lock-faces)
+
+
 (defun empty-string-p (string)
   "Return true if the string is empty or nil. Expects string."
   (or (null string)
@@ -90,15 +155,15 @@
   (setq file-path "/tmp/dashboard_nba.json")
   (mapcar (lambda (entry)
 	    (progn
-	      (if (not (empty-string-p (let-alist entry .nugget.text))) (highlight-phrase (let-alist entry .nugget.text) "hi-blue-b"))
-	      (setq hteam-win (> (string-to-int (let-alist entry .hTeam.score))  (string-to-int (let-alist entry .vTeam.score))))
+	      (if (not (empty-string-p (let-alist entry .nugget.text))) (highlight-phrase (let-alist entry .nugget.text) "charlie-blue-b"))
+	      (setq hteam-win (> (string-to-number (let-alist entry .hTeam.score))  (string-to-number (let-alist entry .vTeam.score))))
 	      (if hteam-win
 		  (progn
-		    (highlight-phrase (let-alist entry .hTeam.triCode) "hi-green")
-		    (highlight-phrase (let-alist entry .vTeam.triCode) "hi-red-b")
+		    (highlight-phrase (let-alist entry .hTeam.triCode) "charlie-green")
+		    (highlight-phrase (let-alist entry .vTeam.triCode) "charlie-red-b")
 		    )
-		(highlight-phrase (let-alist entry .vTeam.triCode) "hi-green")
-		(highlight-phrase (let-alist entry .hTeam.triCode) "hi-red-b")			       
+		(highlight-phrase (let-alist entry .vTeam.triCode) "charlie-green")
+		(highlight-phrase (let-alist entry .hTeam.triCode) "charlie-red-b")			       
 		)	      
 	      )
 	    )
