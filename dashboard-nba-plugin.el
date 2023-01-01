@@ -1,6 +1,6 @@
 ;;; dashboard-nba-plugin.el --- Adds nba highlights to emacs-dashboard
 
-;; Copyright (c) 2017 Charlie Sanders & Contributirs
+;; Copyright (c) 2017 Charlie Sanders
 ;;
 ;; Author: Charlie Sanders
 ;; URL: https://github.com/qorrect/emacs-dashboard-nba
